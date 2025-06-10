@@ -1,0 +1,21 @@
+/* src/pages/Courses/Courses.css */
+
+/* Add specific styles for Courses page here */
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width * 100%) */
+    position: relative;
+    height: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 8px; /* Optional: adds rounded corners to the video iframe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+}

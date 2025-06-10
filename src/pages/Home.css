@@ -1,0 +1,150 @@
+/* src/pages/Home/Home.css */
+
+.hero-section {
+    background-image: url('/images/hero-background.jpg');
+    background-size: contain; /* Changed back to contain as per your original CSS, but 'cover' is often used for hero sections */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1a2a47;
+    color: white;
+    padding: 15px 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px auto;
+    max-width: 900px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    max-width: 700px;
+    width: 100%;
+    z-index: 2;
+}
+
+.hero-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Styles for the hero section's Apply Now button - relies on specificity */
+.hero-section .college-button.hero-button {
+    padding: 12px 24px;
+    font-size: 1.5em;
+    font-weight: 400;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.hero-section .college-button.hero-button:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.campus-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.campus-feature-image {
+    width: calc(50% - 7.5px);
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.campus-feature-image.is-animating {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.campus-feature-image:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .campus-feature-image {
+        width: 100%;
+    }
+}
+
+.campus-description-text {
+    /* These properties are already covered by info-card p, kept for clarity if specific overrides are needed */
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.explore-courses-text {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Explore Courses button - relies on specificity */
+.explore-courses-section .college-button.explore-button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+
+    background-color: #28a745;
+    color: white;
+    padding: 10px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.explore-courses-section .college-button.explore-button:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}

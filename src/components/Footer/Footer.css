@@ -1,0 +1,17 @@
+/* src/components/Footer/Footer.css */
+
+.app-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.app-footer p {
+    margin: 0;
+    font-size: 0.9em;
+}

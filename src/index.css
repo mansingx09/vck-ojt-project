@@ -1,0 +1,272 @@
+/* src/index.css - All global and common styles combined */
+
+/* --- 1. Global Resets & Base Styles --- */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #64E1D9;
+    color: #333;
+    font-size: 17px;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Base list styles */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+ul li, ol li {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Base button style */
+.college-button {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.college-button:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* --- 2. Common Layout & Card Styles (formerly common.css) --- */
+.page-content {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* General styles for headings within info-cards */
+.info-card h2,
+.info-card h3,
+.info-card h4 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.9em;
+}
+
+/* General styles for paragraphs within info-cards */
+.info-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 1.05em;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style for clickable text acting as a navigation link */
+.nav-link-text {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav-link-text:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* --- 3. Common Headings & Animations (formerly headings-animations.css) --- */
+
+/* Generic main page heading style */
+.page-main-heading {
+    text-align: center;
+    color: #1E90FF;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-load {
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+/* Centered paragraph within info-card */
+.info-card .centered-text-paragraph {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Section heading with line */
+.info-card .section-heading-with-line {
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* For lists in info-cards that need specific left-alignment */
+.info-card .aligned-list {
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* Specific blue page heading */
+.page-heading-blue {
+    color: #1e88e5;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.9em;
+}
+
+/* --- 4. Reusable Table Styles (formerly tables.css) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #e6f7ff;
+    color: #1e88e5;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e0f7fa;
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 0.9em;
+    }
+    table th,
+    table td {
+        padding: 8px;
+    }
+}
+.justified-text-paragraph {
+    text-align: justify; /* This will justify the text */
+    /* Add any other common paragraph styles you want here, e.g.: */
+    max-width: 800px; /* Example: Control width if needed */
+    margin: 10px auto 20px auto; /* Example: Center the block and add vertical spacing */
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Ensure these are present for the heading to center and animate */
+.page-main-heading {
+    text-align: center !important;
+    color: #007bff !important;
+    /* ... other animation related properties ... */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-load {
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}/* src/index.css */
+/* src/index.css */
+.page-main-heading {
+    text-align: center !important;
+    color: #1E90FF; /* Example blue color */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+
+    opacity: 1; /* Starts invisible */
+    transform: translateY(20px); /* Starts slightly below its final position */
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1; /* Ends fully visible */
+        transform: translateY(0); /* Ends in its original position */
+    }
+}
+
+.animate-on-load {
+    animation: fadeInSlideUp 0.8s ease-out forwards; /* Applies the animation */
+}

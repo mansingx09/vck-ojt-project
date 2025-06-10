@@ -1,0 +1,74 @@
+/* src/components/MobileMenu.css */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden off-screen initially */
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 200;
+    padding-top: 60px; /* Space for header */
+    box-sizing: border-box;
+}
+
+.mobile-menu.open {
+    right: 0; /* Slide in when open */
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu a, .mobile-menu button {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu a:hover, .mobile-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+.mobile-menu button.apply-now {
+    background-color: #28a745;
+    color: white;
+    margin-top: 15px;
+    border-radius: 0;
+}
+
+.mobile-menu button.apply-now:hover {
+    background-color: #218838;
+}
+
+/* Hide on desktop */
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}

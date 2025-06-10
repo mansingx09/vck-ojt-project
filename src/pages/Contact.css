@@ -1,0 +1,53 @@
+/* src/pages/Contact/Contact.css */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0; /* Let info-card handle its own margin */
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #333;
+    text-align: justify;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 300px; /* Kept this max-width as it was in original CSS */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form .college-button {
+    margin-top: 20px;
+    align-self: flex-start; /* Aligns the button to the start of the form */
+    width: auto; /* Adjusts button width to content */
+    padding: 10px 25px; /* Specific padding for form button */
+}
+
+/* Style for the Google Maps iframe container */
+.map-embed-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
