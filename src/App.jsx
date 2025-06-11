@@ -17,6 +17,7 @@ import NotFoundPage from "./pages/NotFoundPage"; // Corrected path
 
 // Import the main global CSS file from the src/ folder
 import './index.css';
+import ChatbotComponent from './components/Chatbot/ChatbotComponents';
 
 function App() {
   return (
@@ -32,8 +33,10 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
+      <ChatbotComponent/>
       <Footer />
     </Router>
+
   );
 }
 
