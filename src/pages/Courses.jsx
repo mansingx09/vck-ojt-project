@@ -29,16 +29,10 @@ const Courses = () => {
             <div className="info-card">
                 <h2 className="section-heading-with-line">Discover Campus Life</h2>
                 <div className="video-container">
-                    <iframe
-                        width="100%"
-                        height="400"
-                        src={embedUrl}
-                        title="Vivekanand College Kolhapur Campus Life"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                    ></iframe>
+                        <video controls width="100%" height="400">
+                            <source src="/Videos/college-tour.mp4" type="video/mp4" />
+                            your browser does not support the video tag.
+                        </video>
                 </div>
                 <p style={{ textAlign: 'center', marginTop: '10px' }}>Get a glimpse of the vibrant academic and social life at Vivekanand College.</p>
             </div>
