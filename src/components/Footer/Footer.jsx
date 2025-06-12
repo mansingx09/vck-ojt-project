@@ -1,6 +1,6 @@
 // src/components/pages/Footer.jsx
 import React from 'react';
-
+import './Footer.css'
 const Footer = () => {
     return (
         <footer className="app-footer">
